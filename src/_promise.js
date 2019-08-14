@@ -68,7 +68,8 @@
 
                 let errCallback = reason => {
                     let err = typeof onRejected === 'function' && onRejected(reason) || reason;
-                    rej(err);
+
+                    resolve();
                 }
 
                 if (this.status === PADDING) {
